@@ -12,6 +12,11 @@ const App = () => {
             date: new Date(2023, 0, 10),
             title: 'New jeans',
             price: 90.99,
+        },
+        {
+            date: new Date(2023, 0, 10),
+            title: 'Flip flops',
+            price: 10.99,
         }
     ]
     return (
