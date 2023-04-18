@@ -5,14 +5,14 @@ import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpensesFilter';
 
 const Expenses = (props) => {
-    const [filteredYear, setFilteredYear] = useState('2023');
+    const [filteredYear, setFilteredYear] = useState('No Filter');
 
     const filterChangeHandler = (selectedYear) => {
         setFilteredYear(selectedYear);
     };
 
     const filteredExpenses = props.expenses.filter((expense) => {
-        if (filteredYear === '') {
+        if (filteredYear === 'No Filter') {
             return true; // return all expenses
         }
         return expense.date.getFullYear().toString() === filteredYear;
